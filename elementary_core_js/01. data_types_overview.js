@@ -134,5 +134,5 @@ showArguments(1, 2, 3); // { '0': 1, '1': 2, '2': 3 }
 // WeakMap
 // Set
 // WeakSet
-// HTMLCollection
 // Arguments
+// HTMLCollection and other DOM pseudo arrays
