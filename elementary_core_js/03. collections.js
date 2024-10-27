@@ -4,7 +4,7 @@
 // Map
 // WeakMap
 
-// Description: A Set is a collection of unique values.
+// A Set is a collection of unique values.
 // It stores only distinct elements, and you can use it to manage lists of items without duplicates.
 // Values are unique.
 // Maintains the order of insertion.
@@ -49,7 +49,7 @@ const weakSet = new WeakSet();
 const obj = {};
 weakSet.add(obj);
 
-// Description: A WeakSet is like a Set, but its elements are objects, and they are weakly held. This means they do not prevent garbage collection if there are no other references to the objects.
+// A WeakSet is like a Set, but its elements are objects, and they are weakly held. This means they do not prevent garbage collection if there are no other references to the objects.
 // Values must be objects.
 // Not enumerable (no iteration).
 // Useful for tracking objects without retaining them.
@@ -58,3 +58,38 @@ const filteredValues = new WeakSet();
 filteredValues.add({ name: "Bob" });
 // filteredValues.add(1); // TypeError: Invalid value used in weak set
 // [...filteredValues]; // TypeError: filteredValues is not iterable
+
+// ===================================================================
+
+// Map
+
+// A Map is a collection of key-value pairs. Unlike regular JavaScript objects, where keys must be strings or symbols, a Map allows keys of any type, including objects, functions, and primitives.
+
+const map = new Map();
+map.set("key", "value");
+map.set({ obj: 1 }, 42);
+console.log(map.get("key")); // 'value'
+
+// Maintains the order of insertion.
+// Keys can be of any type.
+// Iterates in insertion order.
+const map1 = new Map();
+const personBob = {
+  name: "Bob",
+  age: 40,
+};
+
+const pet1 = "dog";
+
+map1.set(personBob, pet1);
+console.log(map1); // Map(1) { { name: 'Bob', age: 40 } => 'dog' }
+
+// Map.prototype.set()
+// Map.prototype.get()
+// Map.prototype.has()
+// Map.prototype.clear()
+// Map.prototype.delete()
+// Map.prototype.entries()
+// Map.prototype.forEach()
+// Map.prototype.keys()
+// Map.prototype.values()
